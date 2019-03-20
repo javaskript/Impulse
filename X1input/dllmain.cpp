@@ -194,16 +194,6 @@ void ScanGamePads()
 	{
 		if (gamepads[j])
 		{
-			unsigned int k = 0;
-			for (; k < count; ++k)
-			{
-				ComPtr<IGamepad> pad;
-				HRESULT hr = pads->GetAt(k, pad.GetAddressOf());
-				if (SUCCEEDED(hr) && (pad == gamepads[j]))
-				{
-					break;
-				}
-			}
 
 			if (k >= count)
 			{
@@ -275,11 +265,11 @@ static HRESULT GamepadAdded(IInspectable *, ABI::Windows::Gaming::Input::IGamepa
 }
 
 // GamepadRemoved Event
-static HRESULT GamepadRemoved(IInspectable *, ABI::Windows::Gaming::Input::IGamepad*)
-{
-	ScanGamePads();
-	return S_OK;
-}
+// static HRESULT GamepadRemoved(IInspectable *, ABI::Windows::Gaming::Input::IGamepad*)
+// {
+//	ScanGamePads();
+//	return S_OK;
+//}
 #pragma endregion
 
 /*
@@ -406,17 +396,6 @@ DLLEXPORT BOOL APIENTRY DllMain(HMODULE hModule,
 	DWORD  ul_reason_for_call,
 	LPVOID lpReserved
 )
-{
-	/*switch (ul_reason_for_call)
-	{
-	case DLL_PROCESS_ATTACH:
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
-		break;
-	}*/
-	return TRUE;
-}
 
 DLLEXPORT DWORD WINAPI XInputGetState(_In_ DWORD dwUserIndex, _Out_ XINPUT_STATE *pState)
 {
