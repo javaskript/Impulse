@@ -1,6 +1,6 @@
-# X1nput
+# Impulse
 
-X1nput is Xinput rewritten using the [Windows.Gaming.Input API](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) which has better support for Xbox One controllers, including impulse triggers.
+Impulse is Xinput rewritten using the [Windows.Gaming.Input API](https://docs.microsoft.com/en-us/uwp/api/windows.gaming.input) which has better support for Xbox One controllers, including impulse triggers.
 
 There's no way for the game to know whether the controller supports impulse triggers using Xinput API, so this DLL just converts normal vibrations to trigger vibrations.
 
@@ -37,7 +37,7 @@ If you're unsure which DLLs does the game use, you can use [Process Explorer](ht
 
 4. To reload configuration in-game without having to restart, press both shoulder buttons and the start (menu) button.
 
-### Buidling
+### Building
 
 1. Open X1nput.sln using Visual Studio 2015 or higher.
 2. If you want to build a 32-bit version of the DLL, change the solution platform to X86 (Default is x64).
