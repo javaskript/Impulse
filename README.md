@@ -8,6 +8,8 @@ There's no way for the game to know whether the controller supports impulse trig
 
 I'll try to improve the code and add a way to customize strength of the vibrations, but I'm hoping someone could learn from this code and write do something useful with it.
 
+Fork of https://github.com/araghon007/X1nput
+
 ### Usage
 
 1. Launch X1nputConfigurator.exe
